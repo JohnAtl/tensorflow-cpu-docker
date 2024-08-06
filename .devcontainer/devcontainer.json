@@ -1,0 +1,52 @@
+{
+    "name": "Python Dev Container",
+    "dockerFile": "../Dockerfile",
+    "workspaceFolder": "/workspace",
+    "runArgs": [
+        "--user", "${localEnv:USER_ID}:${localEnv:GROUP_ID}",
+        "-v", "${localWorkspaceFolder}:/workspace",
+        "-w", "/workspace"
+    ],
+	"remoteUser": "john",
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"terminal.integrated.shell.linux": "/bin/bash"
+			},
+			"extensions": [
+				"ms-python.python",
+				"ms-azuretools.vscode-docker",
+				"catppuccin.catppuccin-vsc",
+				"github.github-vscode-theme",
+				"gruntfuggly.todo-tree",
+				"iterative.dvc",
+				"jebbs.plantuml",
+				"mechatroner.rainbow-csv",
+				"mhutchie.git-graph",
+				"ms-azuretools.vscode-docker",
+				"ms-python.black-formatter",
+				"ms-python.debugpy",
+				"ms-python.isort",
+				"ms-python.mypy-type-checker",
+				"ms-python.pylint",
+				"ms-python.python",
+				"ms-python.vscode-pylance",
+				"ms-toolsai.jupyter",
+				"ms-toolsai.jupyter-keymap",
+				"ms-toolsai.jupyter-renderers",
+				"ms-toolsai.tensorboard",
+				"ms-toolsai.vscode-jupyter-cell-tags",
+				"ms-toolsai.vscode-jupyter-slideshow",
+				"ms-vscode-remote.remote-containers",
+				"ms-vscode-remote.remote-ssh",
+				"ms-vscode-remote.remote-ssh-edit",
+				"ms-vscode.remote-explorer",
+				"ms-vscode.theme-materialkit",
+				"pkief.material-icon-theme",
+				"tikou-web.gcp-switch-config",
+				"tomoki1207.pdf"
+			]
+		}
+	},
+    "postCreateCommand": "export USER_ID=$(id -u) && export GROUP_ID=$(id -g)"
+}
