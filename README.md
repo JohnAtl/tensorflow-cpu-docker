@@ -6,5 +6,5 @@ This is set up to run Tensorflow without using CUDA/GPU, it uses the CPU instead
 
 There are a couple of things to change:
 - `USERNAME`, `TF_VERSION`, `PYTHON_VERSION` at the top of `Dockerfile`.
-- You username in `remoteUser` in devcontainer.json.
+- Your username in `remoteUser` in devcontainer.json.
 From there, you should be able to use the Dev Containers extension in VSCode to Rebuild and Reopen in Container, then run the tensorflow_mnist_test.py file to see if everything works.
